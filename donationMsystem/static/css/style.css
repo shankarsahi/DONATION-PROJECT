@@ -1,0 +1,361 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: border-box;
+    font-family: Arial;
+    color: white;
+
+}
+
+body {
+    background-color: #000000;
+   
+    
+    /* background-color: #808080; */
+    /* background-color: #ffd700; */
+
+
+}
+
+header {
+    top: 0px;
+    position: sticky;
+}
+
+.navbar {
+   /* opacity: 0.9; */
+    height: 75px;
+    background-color: #04052E;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+
+
+}
+
+.logowithbrandname {
+    padding-left: 45px;
+}
+
+.logowithbrandname a {
+  
+    color: white;
+}
+
+.menu a {
+   
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    font-weight: 600;
+    font-style: italic;
+}
+.h1{
+    display: flex;
+    /* display: inline; */
+    
+}
+#logo {
+    padding: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    height: 60px;
+    width: 100px;
+}
+
+.brand {
+    padding-left: 0px;
+    margin-top: 15px;
+    font-size: xx-large;
+    font-weight: 700;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    
+    
+
+}
+
+.menu {
+    padding-right: 25px;
+
+
+}
+
+.menu a:hover {
+    background-color: #A72608;
+    border: 1px solid;
+    border-radius: 20%;
+    transition: all 0.3s ease-in ;
+}
+
+
+/* END HEADER DESINING */
+.container {
+   
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+#box1 {
+    height: 300px;
+    padding: 5px 5px 5px 5px;
+
+
+}
+
+#box2 {
+    height: 300px;
+    padding: 5px 5px 5px 5px;
+    margin-right: 25px;
+
+
+
+}
+
+#box2 img {
+    height: 300px;
+    width: 725px;
+    border-radius: 35%;
+    border: 2px solid #69140E;
+   
+
+
+
+}
+
+#box1 h1 {
+    text-align: left;
+    color: white;
+    margin-left: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#box1 p {
+    text-align: justify;
+    font-size: medium;
+    font-weight: 500;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#box1 a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+#box1 a:hover {
+
+  background-color:#0D00A4;
+  border: 2px solid #0D00A4;
+  border-radius: 30%;
+  border-width: 14px;
+  transition: all 0.7s ease-in;
+     
+ }
+
+
+
+/* eND HOME */
+
+
+/* START ABOUT DESINING */
+.container-0 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+#box3 {
+    height: 350px;
+    width: 725px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+#box3 img {
+    height: 350px;
+    width: 725px;
+    border-radius: 40%;
+    border: 2px solid #69140E;
+   
+
+}
+
+#box4 {
+    height: 300px;
+    width: 725;
+    padding: 5px 5px 5px 5px;
+
+}
+
+#box4 h3 {
+    font-weight: 500;
+    text-align: justify;
+    margin-right: 25px;
+    line-height: 2rem;
+}
+
+#box4 h2 {
+    text-align: center;
+    color: #69140E;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#box4 a {
+    text-decoration: none;
+    margin-left: 4px;
+    color:white;
+
+}
+#box4 a:hover{
+    background-color: #0D00A4;
+    border: 2px solid #0D00A4;
+    border-radius: 20%;
+    border-width: 14px;
+    transition: all 0.7s ease-in;
+}
+#box4 p{
+    line-height: 1.7;
+}
+
+
+/* end about us */
+
+
+
+/* STSRT SERVICES */
+
+.service-section {
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-evenly;
+
+
+
+}
+
+.service-section .box {
+    height: 400px;
+    width: 23%;
+    padding: 10px 10px 10px 10px;
+}
+
+.box-img {
+    height: 300px;
+    background-size:cover;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+  
+    border:0px solid red
+}
+
+.box-content {
+    margin: 10px 10px 10px 10px;
+}
+
+.box-content h3 {
+    text-align: center;
+    color: WHITE;
+    font-style: italic;
+   font-size: medium;
+ 
+}
+ 
+
+.box-content a {
+  
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 500;
+
+
+}
+
+.box-content a:hover {
+   
+    background-color:#0D00A4;
+    border: 2px solid #0D00A4;
+    border-radius: 20%;
+    border-width: 10px;
+    transition: all 0.1s ease-in;
+
+}
+
+
+
+/* End Services */
+
+
+
+/* start Footer */
+
+ .container-3 {
+    margin-top: 10px;
+    height: 200px;
+    display: flex;
+    background-color: #04052E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #951c1c; 
+    
+} 
+
+.cont h3,.foll h3{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    /* padding-bottom: 5px; */
+    color: #f6ebea;
+    border: 2px chartreuse;
+} 
+.threebox{
+    line-height: 25px;
+}
+.follbox a{
+    text-decoration: none;
+}
+
+.lowerfooter {
+    height: 10px;
+    background-color:#1305b3 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+}
+
+
+#lf {
+    padding: 10px 10px 10px 10px;
+
+}
+
+.copyright {
+    margin-left: 68px;
+}
+
+.madewith {
+    margin-right: 60px;
+}
+
+

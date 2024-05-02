@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonorPage</title>
+
+</head>
+
+<body>
+
+    <main>
+        <DIV class="donor-login-section">
+            <div class="boxA">
+                <h2 >DonorLogin</h2>
+                <div>
+                    <form method="post">
+                        {%csrf_token%}
+                        <input type="email" name="username" placeholder="Enter mail " required>
+                        <br>
+                        <input type="password" name="password" placeholder="Enter Password " required>
+                        <br>
+                        <button type="submit" style=font-style:italic; >LogIn </button>
+                    </form>
+                </div>
+
+
+                <div class="FS">
+                    <a href="{% url 'donorReset' %}"  > Forgot Password
+                        <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                    <a href="{% url 'donorSignup' %}"  > Sign Up
+                        <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </DIV>
+
+    </main>
+
+
+    {% if error == "no" %}
+    <script>
+        alert("logged In Succesfully ! Donat Now ");
+        window.location = ("{% url 'donorHome' %}");
+    </script>
+    {%endif%}
+
+    {% if error == "yes" %}
+    <script>
+        alert("Invalid login Credentials! Try Again");
+
+        return redirect("donorLogin");
+
+    </script>
+    {%endif%}
+    
+</body>
+
+</html>
+
+{% endblock %}

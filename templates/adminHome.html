@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPage</title>
+
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="heading">
+                <h2>Donation Management System</h2>
+                <h4>GIVINGwaY</h4>
+            </div>
+            <div class="profile">
+                <div class="profilepic">
+                    <img src="{% static 'images/adminlogo.png' %}" >
+                 
+
+                </div>
+                <div class="profilename">
+                    <h2>ADMIN</h2>
+                    <p>{{request.user.username}} </p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="menubar">
+                <i class="fa-solid fa-gauge"></i>
+                <a href="{% url 'donorHome' %}">Dashboard
+                </a>
+                <br>
+                <i class="fa-solid fa-hand-holding-dollar">
+                    <a href="{% url 'donateNow' %}">Volunteer History
+                </i>
+                </a>
+                <br>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <a href="{% url 'donationHistory' %}">Donar History
+                    </i>
+                </a>
+                <br>
+ 
+                </ul>
+
+                <i class="fa-solid fa-right-from-bracket">
+                    <a href="{% url 'index.html' %}">Logout
+                </i>
+                </a>
+
+
+            </div>
+
+        </div>
+
+        <div class="maincontent">
+
+
+            {%block donatnow%}
+
+
+
+
+            {% endblock %}
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

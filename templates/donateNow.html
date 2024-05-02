@@ -1,0 +1,64 @@
+<title>donateNow </title>
+
+{% extends "donorHome.html" %}
+
+
+{%block donatnow%}
+<div class="formheading">
+    <div class="heading">
+        <h2>Donate Happiness!</h2>
+    </div>
+    <hr>
+    <div class="formstart">
+        <form method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <label> Donar Name</label>
+            <input   type="text" name="donorname" placeholder="Enter Full Name" required>
+            <br>
+             <label> Donation Name </label>
+             <select name="donationname" id="donationname1" required >
+                <option value="Food Donation">Food Donation</option>
+                <option value="Clothes Donation">Clothes Donation</option>
+                <option value="Foodwear Donation">Footwear Donation</option>
+                <option value="Grocery Donation">Grocrey Donation</option>
+                <option value="Furniture Donation">Furniture Donation</option>
+                <option value="Others">Others</option>
+             </select>
+             <br>
+
+             <label> Donation image</label>
+             <input type="file" name="donationpic" placeholder="upload donationpic" required>
+             <br>
+             <label> Donation Collection Address </label>
+             <textarea name="colloctionloc"  placeholder="Enter Full Address" required></textarea> 
+             <br>
+             <label> Description(with special Note) </label>
+             <textarea name="description"  placeholder="Enter Note" required></textarea> 
+             <br>
+            <input id="w" type="submit" value="Donate Happiely">
+
+
+           
+        </form>
+    </div>
+
+</div>
+{% if error == "no" %}
+<script>
+    alert ("Donation Collection Request Has been Sent. Contact You Soon!")
+    window.location= "{% url 'donationHistory' %}"
+   
+
+</script>
+{%endif%}
+
+{% if error == "yes" %}
+<script>
+   alert ("Somthin Went Wrong!")
+
+</script>
+{%endif%}
+
+
+
+{% endblock %}

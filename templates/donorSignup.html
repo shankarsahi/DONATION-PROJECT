@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonorPage</title>
+
+    <script>
+        function checkpassword() {
+            if (document.signup.pass1.value != document.signup.pass2.value) {
+                alert("password and confirm password does not match !");
+                document.signup.pass2.focus();
+                return false;
+
+            }
+            return true
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <main>
+        <DIV class="donor-signup-section">
+            <div class="boxB">
+                <h2  > DonorSignUp </h2>
+                <form method="post" enctype="multipart/form-data" name="signup" onsubmit="return checkpassword()">
+                    {%csrf_token%}
+                    <input type="text" name="name" placeholder="Enter Full Name " required>
+                    <br>
+                    <input type="text" name="contact" placeholder="Contact Number ">
+                    <br>
+                    <input type="email" name="email" placeholder=" E-mail address">
+                    <br>
+                    <input type="password" name="pass1" placeholder="Password">
+                    <br>
+                    <input type="password" name="pass2" placeholder=" Confirm Password">
+                    <br>
+                    <input id="pic" type="file" name="donorpic" placeholder=" Upload Pic">
+                    <br>
+                    <textarea type="text" name="address" placeholder="Enter Address "></textarea>
+                    <br>
+                    <button type="submit">SignUp </button>
+
+                </form>
+
+ 
+                 <div class="FB2">
+                    <p>Have an account?</p>
+                    <a href="{% url 'donorLogin' %}"> SignIn
+
+                    </a>
+
+                </div> 
+
+            </div>
+
+        </DIV>
+    </main>
+
+    {% if error == "no" %}
+    <script>
+        alert("Signup Succesfully ");
+        window.location = ("{% url 'donorLogin' %}");
+    </script>
+    {%endif%}
+
+    {% if error == "yes" %}
+    <script>
+        alert("Somthing went Wrong");
+        return redirect ("donorSignup");
+
+    </script>
+    {%endif%}
+
+
+</body>
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Login</title>
+
+
+</head>
+
+<body>
+  
+    <main>
+        <div class="login-section">
+            <div class="box1 box">
+                <h2  >Donor Login</h2>
+                <div class="box-img" style="background-image:url('static/images/donoricon.png')"></div>
+                <a href="{% url 'donorSignup' %}">Sign Up
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+                <a href="{% url 'donorLogin' %}">Login
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+
+            </div>
+            <div class="box2 box">
+                <h2  >Volunteer Login</h2>
+                <div class="box-img" style="background-image:url('static/images/volunteerlogo.png')"></div>
+                <a href="{% url 'volunteerSignup' %}">Sign Up
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+                <a href="{% url 'volunteerLogin' %}">
+                    Login
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+            <div class="box3 box">
+                <h2  >Admin Login</h2>
+                <div class="box-img" style="background-image:url('static/images/adminlogo.png')"></div>
+                <a href="{% url 'adminLogin' %}">Login
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
+
+{% endblock %}

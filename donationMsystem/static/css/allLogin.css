@@ -1,0 +1,62 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border:border-box;
+    font-family: Arial;
+
+
+}
+.box h2{
+    color: #A72608;
+    font-style: italic;
+}
+ a {
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px ;
+    padding-right: 20px;
+}
+.homeicon{
+    height:50px;
+    width: 50px;
+    font-size: xx-large;
+    padding: 10px 10px 10px 10px;
+    
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-section{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.login-section .box{
+    height:400px;
+    width: 25%;
+    padding: 10px 10px 10px 10px;
+
+}
+.box-img{
+    height: 325px;
+    background-size:cover;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+.box a{
+    font-weight: 700;
+}
+.box a:hover{
+    border: 1px solid #A72608;
+    border-radius: 30%;
+    font-weight: 700;
+    background-color:#A72608 ;
+    transition: all 0.3s ease-in;
+}
+
+
+
+
